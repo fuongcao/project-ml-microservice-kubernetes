@@ -1,0 +1,21 @@
+(.devops) phuongch@kuMirth:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh 
+NAME       STATUS   ROLES           AGE    VERSION
+minikube   Ready    control-plane   109m   v1.26.3
+deployment.apps/ml-sklearn created
+NAME                          READY   STATUS              RESTARTS   AGE
+ml-sklearn-7f96cbb4d6-l2m74   0/1     ContainerCreating   0          0s
+Name of the Pod: pod/ml-sklearn-7f96cbb4d6-l2m74
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) phuongch@kuMirth:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl get pod
+NAME                          READY   STATUS    RESTARTS   AGE
+ml-sklearn-7f96cbb4d6-l2m74   1/1     Running   0          15s
+(.devops) phuongch@kuMirth:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh 
+NAME       STATUS   ROLES           AGE    VERSION
+minikube   Ready    control-plane   110m   v1.26.3
+error: failed to create deployment: deployments.apps "ml-sklearn" already exists
+NAME                          READY   STATUS    RESTARTS   AGE
+ml-sklearn-7f96cbb4d6-l2m74   1/1     Running   0          19s
+Name of the Pod: pod/ml-sklearn-7f96cbb4d6-l2m74
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
