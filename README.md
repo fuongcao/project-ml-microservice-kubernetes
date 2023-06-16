@@ -41,6 +41,7 @@ kubectl config view
 - Deploy with Kubernetes run [./run_kubernetes.sh](run_kubernetes.sh)
 >![run-kubernetes](images/run-kubernetes.png)
 - kubernetes output file [kubernetes_out.txt](output_txt_files/kubernetes_out.txt)
+>![kubernetes-output](images/kubernetes-output.png)
 
 ## :seven: [Important] Delete Cluster
 ```

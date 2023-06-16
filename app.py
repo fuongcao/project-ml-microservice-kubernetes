@@ -1,10 +1,15 @@
-from flask import Flask, request, jsonify
+from flask import (
+    Flask,
+    request,
+    jsonify
+)
 from flask.logging import create_logger
 import logging
 
 import pandas as pd
 from sklearn.externals import joblib
 from sklearn.preprocessing import StandardScaler
+## Thank you for the code review, I will try
 
 app = Flask(__name__)
 LOG = create_logger(app)
