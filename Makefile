@@ -13,13 +13,13 @@ setup:
 install:
 	# This should be run from inside a virtualenv
 	pip install --upgrade pip &&\
-		pip install -r requirements.
+		pip install -r requirements.txt
 
 install-hadolint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
 	# run this under sudo
 	wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-    chmod +x /bin/hadolint
+	chmod +x /bin/hadolint
 
 test:
 	# Additional, optional, tests could go here
