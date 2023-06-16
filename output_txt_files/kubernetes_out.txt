@@ -12,4 +12,17 @@ Port: 8000
     20.35373177134412
   ]
 }
-(.devops) phuongch@kuMirth:~/udacity/project-ml-microservice-kubernetes$ 
+
+(.devops) phuongch@kuMirth:~/udacity/project-ml-microservice-kubernetes$ export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+(.devops) phuongch@kuMirth:~/udacity/project-ml-microservice-kubernetes$ echo $POD_NAME
+ml-sklearn-7f96cbb4d6-9d26b
+(.devops) phuongch@kuMirth:~/udacity/project-ml-microservice-kubernetes$ ./run_kubernetes.sh 
+NAME       STATUS   ROLES           AGE    VERSION
+minikube   Ready    control-plane   121m   v1.26.3
+error: failed to create deployment: deployments.apps "ml-sklearn" already exists
+NAME                          READY   STATUS    RESTARTS   AGE
+ml-sklearn-7f96cbb4d6-9d26b   1/1     Running   0          112m
+Name of the Pod: pod/ml-sklearn-7f96cbb4d6-9d26b
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
